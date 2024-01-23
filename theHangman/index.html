@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>the Hangman</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" href="/images/icon.png" type="image/x-icon">
+</head>
+
+<body>
+	<div class="container start">
+		<h1>Welcome to the hangman</h1>
+		<div class="user">
+			<input type="text" id="username" placeholder="Enter your username">
+			<button id="deleteBtn">Delete</button>
+		</div>
+		<form>
+			<select id="category">
+				<option value="cat" selected disabled hidden>Category</option>
+				<option value="sports">Sports</option>
+				<option value="computers">Computers</option>
+				<option value="coding">Coding</option>
+				<option value="formula1">Formula 1</option>
+				<option value="musicGroups">Music groups</option>
+				<option value="videogames">Videogames</option>
+			</select>
+			<div id="co">
+				<h4 id="cc">Countdown</h4>
+
+				<input type="number" id="secondsSelector" value="10" min="3" max="50">
+			</div>
+		</form>
+		<div class="buttons">
+			<button id="startBtn">START GAME</button>
+			<button id="recordsBtn">VIEW RECORDS</button>
+			<button id="homeBtn">HOME</button>
+		</div>
+	</div>
+	</div>
+
+	<div class="container game">
+		<h1 id="title">the Hangman</h1>
+		<p id="message"></p>
+		<p class="text">You have <span id="livesDisplay">7</span> lives left</p>
+		<img src="images/imglost.gif" id="imglost">
+		<img src="images/imgwin.gif" id="imgwin">
+		<span id="secretWord"></span>
+		<div id="alphabet">
+			<div class="row">
+				<div class="letter" id="q">Q</div>
+				<div class="letter" id="w">W</div>
+				<div class="letter" id="e">E</div>
+				<div class="letter" id="r">R</div>
+				<div class="letter" id="t">T</div>
+				<div class="letter" id="y">Y</div>
+				<div class="letter" id="u">U</div>
+				<div class="letter" id="i">I</div>
+				<div class="letter" id="o">O</div>
+				<div class="letter" id="p">P</div>
+			</div>
+			<div class="row">
+				<div class="letter" id="a">A</div>
+				<div class="letter" id="s">S</div>
+				<div class="letter" id="d">D</div>
+				<div class="letter" id="f">F</div>
+				<div class="letter" id="g">G</div>
+				<div class="letter" id="h">H</div>
+				<div class="letter" id="j">J</div>
+				<div class="letter" id="k">K</div>
+				<div class="letter" id="l">L</div>
+				<div class="letter" id="ñ">Ñ</div>
+			</div>
+			<div class="row">
+				<div class="letter" id="z">Z</div>
+				<div class="letter" id="x">X</div>
+				<div class="letter" id="c">C</div>
+				<div class="letter" id="v">V</div>
+				<div class="letter" id="b">B</div>
+				<div class="letter" id="n">N</div>
+				<div class="letter" id="m">M</div>
+			</div>
+		</div>
+		<p class="text">You did <span id="failsDisplay">0</span> fails</p>
+		<div id="countdown"></div>
+		<div id="timer"></div>
+		<button id="restartBtn">restart</button>
+		<button id="backBtn">Go Back</button>
+
+
+		<script src="script.js" type="module"></script>
+	</div>
+	<div class="container records">
+		<button id="backBtnRecords">Go Back</button>
+
+		<div id="records">
+
+		</div>
+
+	</div>
+	<video autoplay muted loop id="myVideo">
+		<source src="images/backgroundVideo.mp4" type="video/mp4">
+	</video>
+</body>
+
+</html>

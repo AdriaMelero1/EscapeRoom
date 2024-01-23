@@ -1,0 +1,330 @@
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&family=Oswald&family=Raleway&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border-radius: 10px;
+}
+
+.game{
+	display: none;
+}
+
+body {
+	font-family: "Raleway", sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: white;
+	padding: 50px;
+	padding-bottom: 0;
+}
+
+h1{
+	margin:0 20px;
+	text-align: center;
+}
+
+#myVideo {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	z-index: -1;
+}
+
+#category {
+	margin-bottom: 10px !important;
+}
+
+p {
+	margin: 20px;
+	font-size: 25px;
+}
+
+
+.text span {
+	color: red;
+}
+
+.container {
+	background-color: black;
+	border: 3px solid white;
+	padding: 50px 50px 20px 50px;
+	width: 80%;
+	min-width: 600px;
+	min-height: 850px;
+	display: none;
+	flex-direction: column;
+	align-items: center;
+}
+
+.start {
+	height: auto;
+	position: relative;
+	max-width: 500px;
+	display: flex;
+}
+
+.start > *,
+.start > * > * {
+	margin: 30px !important;
+}
+
+#alphabet {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+	border: 1px solid red;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 550px;
+}
+
+.row {
+	display: flex;
+}
+
+.letter {
+	padding: 10px;
+	margin: 5px;
+	border: 1px solid white;
+	width: 40px;
+	text-align: center;
+	transition: 0.2s;
+}
+
+.letter:hover {
+	font-weight: 800;
+	cursor: pointer;
+	background-color: white;
+	border: 1px solid red;
+	color: red;
+}
+
+.letter.contained {
+	background-color: rgb(78, 134, 22);
+	color: white;
+}
+
+.letter.not-contained {
+	background-color: rgb(172, 31, 26);
+	color: white;
+}
+
+.letter.contained:hover,
+.letter.not-contained:hover {
+	border: 1px solid white;
+	font-weight: initial;
+}
+
+#secretWord {
+	padding: 10px 0 10px 0;
+	font-size: 40px;
+}
+
+.buttons{
+	display: flex;
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
+button,
+option,
+select,
+input,
+#username {
+	text-align: center;
+	display: block;
+	background-color: black;
+	border: 2px solid red;
+	color: white;
+	padding: 5px 10px;
+	font-family: "Raleway", sans-serif;
+	font-size: 20px;
+	cursor: pointer;
+	transition: 0.3s;
+	margin: 10px;
+}
+
+#username {
+	width: 300px;
+}
+
+#username.red::placeholder{
+	color: red;
+}
+
+
+
+form {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 0 !important;
+}
+
+#co{
+	margin: 0  20px 0 0!important;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+input[type="number"] {
+	width: 70px;
+}
+
+#restartBtn:hover {
+	background-color: red;
+	color: black;
+	font-weight: 800;
+}
+
+#homeBtn {
+	position: absolute;
+	left: 0;
+}
+
+
+#secondsSelector {
+	margin: 0 !important;
+}
+
+img {
+	margin-top: 30px;
+	height: 150px;
+	display: none;
+	border: 1px solid white;
+}
+
+#timer {
+	margin: 20px;
+	font-size: 25px;
+}
+
+#timer.end {
+	border: 1px solid white;
+	padding: 5px 10px;
+}
+
+#timer.end:hover {
+	color: black;
+	background-color: white;
+	font-weight: 800;
+}
+
+#countdown {
+	font-size: 30px;
+	color: red;
+	margin: 10px;
+}
+
+.user{
+	display: flex;
+	flex-direction: row;
+}
+
+@media screen and (max-width: 640px) {
+	body {
+		padding: 0;
+	}
+
+	#alphabet {
+		width: 90%;
+		padding: 15px 0;
+	}
+
+	.letter {
+		display: block;
+		text-align: center;
+		font-size: 15px;
+		width: 6.5vw;
+		padding: 10px 0;
+		margin: 3px 3px;
+	}
+
+	.container {
+		margin: 20px;
+		margin-bottom: 0;
+		min-width: 0;
+		width: 95%;
+		height: device-height;
+		padding: 30px 0;
+		position: absolute;
+	}
+
+
+	.start {
+		height: auto;
+	}
+
+	.start h1 {
+		font-size: 5vw;
+	}
+
+	.user{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#deleteBtn {
+		width: 100px;
+		margin: 0 !important;
+	}
+
+	#username  {
+		max-width: 260px;
+	}
+
+	.buttons {
+		position: fixed;
+		bottom: 0px;
+	}
+}
+
+#backBtn, #backBtnRecords {
+	position: fixed;
+	bottom: 20px;
+	left: 10px;
+}
+
+#startBtn {
+	margin-top: 40px !important;
+	position: absolute;
+	bottom: 80px;
+	background-color: red;
+	border-color: white;
+	color: black;
+}
+
+#startBtn:hover {
+	color: red;
+	background-color: white;
+	font-weight: 800;
+}
+
+
+
+#recordsBtn{
+	position: absolute;
+	bottom: 0;
+	font-size: 15px;
+}
+
+#deleteBtn {
+	display: none;
+}
+
+
+.container.records{
+	display: none;
+}
+

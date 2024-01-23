@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../style.css">
+	<title>Register</title>
+</head>
+<body>
+	<h1>Register</h1>
+
+	<form>
+		<label for="username">Username</label>
+		<input type="text" name="username" id="username" placeholder="Username">
+
+		<label for="password">Password</label>
+		<div id="divPassword">
+			<input type="password" name="password" id="password" placeholder="Password">
+
+			<label for="btnShowPassword">Show password</label>
+			<input type="checkbox" id="btnShowPassword">
+		</div>
+
+		<label for="password2">Repeat Password</label>
+		<input type="password" name="password2" id="password2" placeholder="Repeat Password">
+
+
+		<button type="button">Register</button>
+	</form>
+	<br>
+	<button id="btnBack">GO BACK</button>
+
+
+	<script src="../scripts/commonFunctions.js"></script>
+	<script src="../scripts/register.js"></script>
+	<!-- <script src="../script.js"></script> -->
+</body>
+</html>
