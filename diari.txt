@@ -4,7 +4,7 @@ crear los ficheros básicos y añadir el juego del ahorcado.
 24-01-2024 - Segundo dia: hoy he subido el juego a netlify, estudiado opciones para guardar y leer usuarios, 
 creado ficheros de login, register, common functions y empezado con proceso de registro
 
-Tercer dia: hoy he...
+Tercer dia: hoy he empezado con la validacion del formulario de registro y avanzado un poco el login
 
 Cuarto dia: hoy he...
 

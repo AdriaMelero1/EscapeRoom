@@ -1,3 +1,5 @@
+const message = document.getElementById('message');
+
 //CAPTURE BUTTONS
 const btnBack = document.getElementById('btnBack');
 
@@ -5,6 +7,7 @@ const btnBack = document.getElementById('btnBack');
 //CAPTURE FIELDS
 let fieldUsername = document.getElementById('username');
 let fieldPassword = document.getElementById('password');
+let fieldPassword2 = document.getElementById('password2');
 
 
 

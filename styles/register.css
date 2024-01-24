@@ -1,0 +1,105 @@
+/* #780000, #c1121f, #fdf0d5, #003049, #669bbc */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cuprum&family=IBM+Plex+Mono&display=swap');
+
+:root{
+    --error: #c1121f;
+    --light-error: #f2a9ae;
+    --correct: #588157;
+    --correct-light: #a1cba0;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'IBM Plex Mono', monospace;
+    background-color: #fdf0d5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container{
+    background-color: rgb(165, 199, 219);
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    width: 400px;
+}
+
+h2{
+    text-align: center;
+    margin: 0 0 20px;
+}
+
+.form{
+    padding: 30px 40px;
+}
+
+.form-control{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.form-control label {
+    color: #780000;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.form-control input{
+    border: 2px solid #780000;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-family: 'IBM Plex Mono';
+}
+
+.form-control input:focus{
+    outline: 0px;
+    background-color: #fdf0d5;
+    border-color: black;
+}
+
+.form-control.correct input{
+    border-color: var(--correct);
+    background-color: var(--correct-light);
+}
+
+.form-control.error input{
+    border-color: var(--error);
+    background-color: var(--light-error);
+}
+
+.form-control small{
+    color: var(--error);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.form-control.error small{
+    visibility: visible;
+}
+
+.form button{
+    cursor: pointer;
+    color: #780000;
+    background-color: #fdf0d5;
+    border: 3px solid #780000;
+    border-radius: 5px;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 30px;
+    width: 100%;
+}
