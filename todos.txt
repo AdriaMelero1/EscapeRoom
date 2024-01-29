@@ -1,1 +1,4 @@
-keep developing the register process
+register working, now need to coment the process
+and do the login.
+
+Adapt the records system from hangmann (localstorage --> sessionStorage)

@@ -14,7 +14,6 @@ const failsDisplay = document.getElementById('failsDisplay');
 const restartBtn = document.getElementById('restartBtn');
 const startBtn = document.getElementById('startBtn');
 const backBtn = document.getElementById('backBtn');
-const deleteBtn = document.getElementById('deleteBtn');
 const backBtnRecords = document.getElementById('backBtnRecords');
 const recordsBtn = document.getElementById('recordsBtn');
 const homeBtn = document.getElementById('homeBtn');
@@ -25,7 +24,8 @@ const topText = document.querySelector('.text');
 const timer = document.getElementById('timer');
 const countdown = document.getElementById('countdown');
 const category = document.getElementById('category');
-const username = document.getElementById('username');
+const usernameField = document.getElementById('username');
+const username = localStorage.getItem('userLoggedIn');
 const secondsSelector = document.getElementById('secondsSelector');
 
 
@@ -343,7 +343,7 @@ function checkRecord(word) {
 	}
 
 	//create a new temporary record to compare with old ones
-	let newRecord = [username.value, time, fails];
+	let newRecord = [username, time, fails];
 
 
 	//If its first time for this word
@@ -366,27 +366,6 @@ function checkRecord(word) {
 	}
 }
 
-
-function openCreateDB() {
-	// First, try to get the item users from localStorage
-	users = JSON.parse(localStorage.getItem('users'));
-
-	// If there's no item, create an empty array
-	if (!users) {
-		users = [];
-	}
-}
-
-
-function logIn(username) {
-
-	//Check if is a new user, we add it to users and update the localstorage
-	if (!users.includes(username)) {
-
-		users.push(username);
-		localStorage.setItem('users', JSON.stringify(users));
-	}
-}
 
 //Generates a html string to display on screen
 function generateRecords() {
@@ -418,7 +397,7 @@ container.addEventListener('click', (e) => {
 
 //When the page is loaded, try to open or create the localstorage and set style properties
 window.addEventListener('DOMContentLoaded', () => {
-	openCreateDB();
+	usernameField.value = username;
 	request.send();
 });
 
@@ -429,14 +408,11 @@ startBtn.addEventListener('click', () => {
 
 	if (username.value != '' && category.value != 'cat') {
 		//if not, we call login with the username value always in lowercase, then start game and style properties
-		logIn(username.value.toLocaleLowerCase());
 		startGame();
 		startContainer.style.display = 'none';
 		container.style.display = 'flex';
 	} else {
 		//style modifications modifications so the user understands that category and username is needed to start
-		username.classList.add('red');
-		username.placeholder = "Please enter a username"
 		if (category.value == 'cat') {
 			category.style.backgroundColor = "red"
 		}
@@ -456,20 +432,15 @@ category.addEventListener('change', () => {
 //Button to turn back, ends the game and style properties
 backBtn.addEventListener('click', () => {
 	gameEnded();
-	username.value = "";
-	username.classList.remove('red');
 	category.value = "cat";
 
 	startContainer.style.display = 'flex';
 	container.style.display = 'none';
 	recordsContainer.style.display = 'none';
-	deleteBtn.style.display = "none";
 });
 
 //Same back button but for records screen
 backBtnRecords.addEventListener('click', () => {
-	username.value = "";
-	username.classList.remove('red');
 
 	startContainer.style.display = 'flex';
 	container.style.display = 'none';
@@ -492,32 +463,6 @@ homeBtn.addEventListener('click', () => {
 });
 
 
-//every letter typed in the username field, check if theres a username with that value
-//If yes, a button to delete it is displayed
-username.addEventListener('keyup', () => {
-	if (users.includes(username.value.trim().toLocaleLowerCase())) {
-		username.style.width = "300px";
-		deleteBtn.style.display = "block";
-	} else {
-		deleteBtn.style.display = "none"
-	}
-});
-
-//Button to delete a user and update localstorage with the new array without the deleted user
-deleteBtn.addEventListener('click', () => {
-
-	let index = users.indexOf(username.value.toLocaleLowerCase());
-
-	users.splice(index, 1);
-
-	localStorage.setItem('users', JSON.stringify(users));
-
-	username.value = "";
-
-	deleteBtn.style.display = "none";
-	username.style.width = "300px";
-
-});
 
 //Import JSON
 let request = new XMLHttpRequest();

@@ -19,3 +19,18 @@ btnPlayHangman.addEventListener('click', () => {
 		window.location.href = 'thehangman/index.html';
 });
 
+btnLogout.addEventListener('click', () => {
+	localStorage.removeItem('userLoggedIn');
+	window.location.href = '../index.html';
+});
+
+
+window.addEventListener('load', () => {
+
+	if(localStorage.getItem('userLoggedIn')){
+		btnLogout.style.display = 'true';
+		console.log("Welcome " + localStorage.getItem('userLoggedIn'));
+	} else {
+		btnLogout.style.display = 'none';
+	}
+});

@@ -1,12 +1,13 @@
-23-01-2024 - Primer dia: hoy he empezado a pensar en algunas ideas para los escapes rooms, creado repositorio de github, 
+22-01-2024 - Primer dia: hoy he empezado a pensar en algunas ideas para los escapes rooms, creado repositorio de github, 
 crear los ficheros básicos y añadir el juego del ahorcado.
 
-24-01-2024 - Segundo dia: hoy he subido el juego a netlify, estudiado opciones para guardar y leer usuarios, 
+23-01-2024 - Segundo dia: hoy he subido el juego a netlify, estudiado opciones para guardar y leer usuarios, 
 creado ficheros de login, register, common functions y empezado con proceso de registro
 
-Tercer dia: hoy he empezado con la validacion del formulario de registro y avanzado un poco el login
+24-01-2024 - Tercer dia: hoy he empezado con la validacion del formulario de registro y avanzado un poco el login
 
-Cuarto dia: hoy he...
+29-01-2024 - Cuarto dia: hoy he acabado la validacion del formulario de registro y adaptado los usuarios 
+del juego general al juego del ahoracado (tenia sus propios usuarios)
 
 Quinto dia: hoy he...
 

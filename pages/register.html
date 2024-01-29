@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
 	<link rel="stylesheet" href="../styles/register.css">
 	<title>Register</title>
 </head>
+
 <body>
 	<h1>Register</h1>
 
@@ -15,19 +17,23 @@
 			<label for="username">User Name</label>
 			<input type="text" id="username" placeholder="Enter your User Name">
 			<small>Error Message</small>
-	</div>
-	<div class="form-control">
+		</div>
+		<div class="form-control">
 			<label for="password">Password</label>
 			<input type="password" id="password" placeholder="Enter your Password">
+			<small>Error Message</small>
+		</div>
+		<div class="show-password">
 			<label for="btnShowPassword">Show password</label>
 			<input type="checkbox" id="btnShowPassword">
-			<small>Error Message</small>
-	</div>
-	<div class="form-control ">
+		</div>
+		<div class="form-control ">
 			<label for="password2">Confirm your Password</label>
 			<input type="password" id="password2" placeholder="Enter your Password again">
 			<small>Error Message</small>
-	</div>
+		</div>
+
+		<div id="message"></div>
 
 		<button type="button">Register</button>
 	</form>
@@ -39,4 +45,5 @@
 	<script src="../scripts/register.js"></script>
 	<!-- <script src="../script.js"></script> -->
 </body>
+
 </html>

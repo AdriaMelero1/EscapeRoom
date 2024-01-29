@@ -1,9 +1,16 @@
+:root {
+	--error: #c1121f;
+	--light-error: #f2a9ae;
+	--correct: #588157;
+	--correct-light: #a1cba0;
+}
+
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
-
 
 body {
 	font-family: Arial, sans-serif;
@@ -46,10 +53,32 @@ button {
 	cursor: pointer;
 }
 
+#btnBack {
+	position: absolute;
+	left: 10px;
+	bottom: 10px;
+}
+
 #btnBack:hover {
 	background-color: #5a6268;
 }
 
 #divPassword {
 	display: flex;
+}
+
+.container {
+	background-color: rgb(165, 199, 219);
+	border-radius: 10px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+	width: 400px;
+}
+
+.show-password {
+	display: flex;
+	align-items: center;
+}
+
+.show-password input {
+	margin-right: 10px;
 }
