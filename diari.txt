@@ -9,7 +9,9 @@ creado ficheros de login, register, common functions y empezado con proceso de r
 29-01-2024 - Cuarto dia: hoy he acabado la validacion del formulario de registro y adaptado los usuarios 
 del juego general al juego del ahoracado (tenia sus propios usuarios)
 
-Quinto dia: hoy he...
+30-01-2024 - Quinto dia: hoy he acabado el proceso de registrar usuarios, login y logout. 
+Tambien he empezado con los estilos generales. También he cambiado el sistema de records de el ahorcado, 
+de local storage a session storage para no interferir con los usuarios.
 
 Sexto dia: hoy he...
 

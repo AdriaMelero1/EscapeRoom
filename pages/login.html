@@ -12,13 +12,17 @@
 	<h1>Login</h1>
 
 	<form>
-		<label for="username">Username</label>
-		<input type="text" name="username" id="username" placeholder="Username">
-
-		<label for="password">Password</label>
-		<div id="divPassword">
-			<input type="password" name="password" id="password" placeholder="Password">
-
+		<div class="form-control">
+			<label for="username">User Name</label>
+			<input type="text" id="username" placeholder="Enter your User Name">
+			<small>Error Message</small>
+		</div>
+		<div class="form-control">
+			<label for="password">Password</label>
+			<input type="password" id="password" placeholder="Enter your Password">
+			<small>Error Message</small>
+		</div>
+		<div class="show-password">
 			<label for="btnShowPassword">Show password</label>
 			<input type="checkbox" id="btnShowPassword">
 		</div>

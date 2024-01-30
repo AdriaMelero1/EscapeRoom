@@ -1,6 +1,6 @@
+//CAPTURE ELEMENTS
 const message = document.getElementById('message');
 
-//CAPTURE BUTTONS
 const btnBack = document.getElementById('btnBack');
 
 
@@ -21,7 +21,46 @@ btnShowPassword.addEventListener('change', (e) => {
 	}
 });
 
+
 //BUTTONS ACTIONS LISTENERS
 btnBack.addEventListener('click', () => {
 	window.location.href = '../index.html';
 });
+
+
+//FORM VALIDATIONS
+//Display error message
+function displayError(input, message){
+	const formControl = input.parentElement;
+	formControl.className = 'form-control error';
+	const label = formControl.querySelector('label');
+	const small = formControl.querySelector('small');
+	small.innerText = message;
+	console.log("Displaying error..." + input + " " + message);
+}
+
+//Display correct message
+function displayCorrect(input){
+	const formControl = input.parentElement;
+	formControl.className = 'form-control correct';
+}
+
+//Function to take input name and capitalize first letter
+function takeInputName(input){
+	return input.id.charAt(0).toUpperCase() + input.id.slice(1);
+}
+
+//Function to check mandatory fields are not empty
+function isMandatory(inputArray) {
+	
+	let result = true;
+	inputArray.forEach((input) => {
+			if(input.value.trim() === ''){
+					displayError(input, `${takeInputName(input)} It s Mandatory`);
+					result = false;					
+			} else {
+					displayCorrect(input);
+			}
+	});
+	return result;
+}

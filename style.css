@@ -1,4 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Cuprum&family=IBM+Plex+Mono&display=swap");
+
 :root {
+	--main: #eb5e28;
+	--super-light: #fffcf2;
+	--light: #ccc5b9;
+	--dark-grey: #403d39;
+	--black: #252422;
+
+
+
 	--error: #c1121f;
 	--light-error: #f2a9ae;
 	--correct: #588157;
@@ -13,44 +23,53 @@
 }
 
 body {
-	font-family: Arial, sans-serif;
-	background-color: #5c0000;
-	padding: 20px;
+	font-family: 'Cuprum', sans-serif;
+	background-color: var(--black);
+}
+
+header {
+	background-color: var(--dark-grey);
+	padding: 10px;
 }
 
 h1 {
-	color: #f28585;
+	color: var(--main);
+	font-size: 50px;
 }
 
 form {
-	background-color: #fff;
+	background-color: var(--light);
+	color: var(--dark-grey);
 	padding: 20px;
 	border-radius: 15px;
 	max-width: 500px;
-	margin: 0 auto;
-	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+	margin: 50px auto;
+	display: flex;
+	flex-direction: column;
 }
 
-label {
-	display: block;
-	margin-bottom: 5px;
-}
-
-input[type="text"], input[type="password"] {
-	width: 100%;
-	padding: 10px;
-	margin-bottom: 20px;
-	border-radius: 5px;
-	border: 1px solid #ccc;
+.btnsUser{
+	position: absolute;
+	right: 0;
+	top: 0;
+	margin: 20px;
 }
 
 button {
-	background-color: #6c757d;
-	color: #fff;
-	padding: 10px 20px;
+	font-family: 'Cuprum', sans-serif;
+	font-size: 20px;
+	background-color: var(--main);
+	color: var(--light);
+	padding: 7px 15px;
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
+}
+
+button:hover {
+	background-color: var(--dark-grey);
+	border: 1px solid var(--main);
+	padding: 6px 14px;
 }
 
 #btnBack {
@@ -59,26 +78,77 @@ button {
 	bottom: 10px;
 }
 
-#btnBack:hover {
-	background-color: #5a6268;
+#message{
+	text-align: center;
+	margin: 10px;
+	font-size: 20px;
 }
 
-#divPassword {
-	display: flex;
-}
-
-.container {
-	background-color: rgb(165, 199, 219);
-	border-radius: 10px;
-	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-	width: 400px;
-}
 
 .show-password {
 	display: flex;
 	align-items: center;
+	justify-content: center;
+	margin-bottom: 30px;
 }
 
 .show-password input {
-	margin-right: 10px;
+	margin-left: 10px;
 }
+
+
+.form-control {
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+	text-align: center;
+	position: relative;
+}
+
+.form-control label {
+	color: var(--dark-grey);
+	display: block;
+	margin-bottom: 5px;
+	font-weight: 800;
+	font-size: 25px;
+}
+
+.form-control input {
+	border: 2px solid var(--black);
+	border-radius: 10px;
+	font-size: 15px;
+	display: block;
+	width: 100%;
+	padding: 10px;
+	font-family: "Cuprum", sans-serif;
+}
+
+.form-control input:focus {
+	outline: 0px;
+	background-color: #fdf0d5;
+	border-color: var(--main);
+}
+
+.form-control.correct input {
+	border-color: var(--correct);
+	background-color: var(--correct-light);
+}
+
+.form-control.error input {
+	border-color: var(--error);
+	background-color: var(--light-error);
+}
+
+.form-control small {
+	color: var(--error);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+	font-size: 15px;
+}
+
+.form-control.error small {
+	visibility: visible;
+}
+
+

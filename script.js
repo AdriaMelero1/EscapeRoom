@@ -3,6 +3,7 @@ const btnPlayHangman = document.getElementById('btnPlayHangman');
 const btnLoginPage = document.getElementById('btnLoginPage');
 const btnRegisterPage = document.getElementById('btnRegisterPage');
 const btnLogout = document.getElementById('btnLogout');
+const btnProfile = document.getElementById('btnProfile');
 
 
 
@@ -24,13 +25,23 @@ btnLogout.addEventListener('click', () => {
 	window.location.href = '../index.html';
 });
 
+btnProfile.addEventListener('click', () => {
+	window.location.href = 'pages/profile.html';
+});
+
 
 window.addEventListener('load', () => {
 
 	if(localStorage.getItem('userLoggedIn')){
 		btnLogout.style.display = 'true';
+		btnPlayHangman.style.display = 'true';
+		btnLoginPage.style.display = 'none';
+		btnRegisterPage.style.display = 'none';
 		console.log("Welcome " + localStorage.getItem('userLoggedIn'));
 	} else {
 		btnLogout.style.display = 'none';
+		btnPlayHangman.style.display = 'none';
+		btnLoginPage.style.display = 'true';
+		btnRegisterPage.style.display = 'true';
 	}
 });

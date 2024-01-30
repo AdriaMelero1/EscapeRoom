@@ -1,18 +1,38 @@
+//Check if there is a user logged in. If so, redirect to index.html
+window.addEventListener('load', () => {
+	if(localStorage.getItem('userLoggedIn')){
+		window.location.href = '../index.html';
+	}
+});
 
-document.querySelector('form').addEventListener('submit', function(e) {
+//Event listener for button login
+document.querySelector('form').addEventListener('submit', function (e) {
 	e.preventDefault();
+	
+	//Capture fields
+	let username = fieldUsername.value;
+	let password = fieldPassword.value;
+	
+	//Check fields are not empty
+	isMandatory([fieldUsername, fieldPassword]);
 
-	let username = document.getElementById('username').value;
-	let password = document.getElementById('password').value;
-
+	//Check if user exists
 	if (localStorage.getItem(username)) {
+
+		//Capture user from local storage into User array
 		let user = JSON.parse(localStorage.getItem(username));
+
+		//Compare if password is correct
 		if (user[1] == password) {
-			console.log('Login successful');
-			localStorage.setItem('currentUser', username);
-			window.location.href = 'index.html';
-		} else {
-			console.log('Incorrect password');
+			//if its correct, add userLoggedIn to localstorage, wait and redirect to index.html
+			localStorage.setItem('userLoggedIn', username);
+			setTimeout(() => window.location.href = '../index.html', 500);
+			//If password is incorrect, display error
+		} else if (!fieldPassword.value == ''){
+			displayError(fieldPassword, 'Incorrect Password');
 		}
+		//If user does not exist, display error
+	} else if (!fieldUsername.value == '') {
+		displayError(fieldUsername, 'User does not exist');
 	}
 });

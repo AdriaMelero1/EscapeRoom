@@ -335,7 +335,7 @@ function getRamdomWord(category) {
 function checkRecord(word) {
 
 	//First check if theres a record for this word
-	let record = JSON.parse(localStorage.getItem(word));
+	let record = JSON.parse(sessionStorage.getItem(word));
 	//Capture the time the user spent
 	let time = myTime.getSeconds();
 	if (myTime.getMinutes() > 0) {
@@ -348,15 +348,15 @@ function checkRecord(word) {
 
 	//If its first time for this word
 	if (!record) {
-		//Create the item in localstorage with the time spent (always its a record because its first time)
-		localStorage.setItem(word, JSON.stringify(newRecord));
+		//Create the item in sessionStorage with the time spent (always its a record because its first time)
+		sessionStorage.setItem(word, JSON.stringify(newRecord));
 		title.innerHTML = "You set the first record for this word! <br>Time: " + time + " Seconds";
 	} else {
 		//If the word has been already played, we check if the time its faster than the previous record
 		if (time < record[1]) {
 			//If its faster, we update the record time value for that word
 			title.innerText = "New record! " + time + " seconds";
-			localStorage.setItem(word, JSON.stringify(newRecord));
+			sessionStorage.setItem(word, JSON.stringify(newRecord));
 		} else {
 			//If theres a faster time set, we show the record and the user who did it
 			title.innerHTML = "Actual record: " + record[1] + " seconds <br> by: " + record[0];
@@ -395,7 +395,7 @@ container.addEventListener('click', (e) => {
 
 
 
-//When the page is loaded, try to open or create the localstorage and set style properties
+//When the page is loaded, try to open or create the sessionStorage and set style properties
 window.addEventListener('DOMContentLoaded', () => {
 	usernameField.value = username;
 	request.send();
