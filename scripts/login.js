@@ -5,6 +5,18 @@ window.addEventListener('load', () => {
 	}
 });
 
+const btnShowPassword = document.getElementById('btnShowPassword');
+
+
+btnShowPassword.addEventListener('change', (e) => {
+	if (e.target.checked) {
+		fieldPassword.type = 'text';
+	} else {
+		fieldPassword.type = 'password';
+	}
+});
+
+
 //Event listener for button login
 document.querySelector('form').addEventListener('submit', function (e) {
 	e.preventDefault();

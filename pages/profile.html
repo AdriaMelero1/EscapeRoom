@@ -4,8 +4,51 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Profile</title>
+	<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	
+	<header>
+		<h1 id="logo">Escape Room</h1>
+
+		<button id="btnPlayHangman">Play The Hangman</button>
+		<div class="btnsUser">
+			<button id="btnLoginPage">Log in</button>
+			<button id="btnRegisterPage">Register</button>
+			<button id="btnLogout">Log out</button>
+			<button id="btnProfile">Profile</button>
+		</div>
+	</header>
+
+	<h2>Profile Info</h2>
+
+	<form>
+		<h3>Change your profile Information</h3>
+		<div class="form-control">
+			<label for="username">User Name</label>
+			<input type="text" id="username">
+			<small>Error Message</small>
+		</div>
+		<div class="form-control">
+			<label for="password">Password</label>
+			<input type="password" id="password" placeholder="Enter your Password">
+			<small>Error Message</small>
+		</div>
+		<div class="show-password">
+			<label for="btnShowPassword">Show password</label>
+			<input type="checkbox" id="btnShowPassword">
+		</div>
+		<div class="form-control">
+			<label for="password2">Confirm your Password</label>
+			<input type="password" id="password2" placeholder="Enter your Password again">
+			<small>Error Message</small>
+		</div>
+
+		<div id="message"></div>
+
+		<button type="button" id="btnRegister">Register</button>
+
+
+	<script src="../scripts/profile.js"></script>
+	<script src="../script.js"></script>
 </body>
 </html>

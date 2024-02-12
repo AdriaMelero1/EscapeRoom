@@ -397,7 +397,11 @@ container.addEventListener('click', (e) => {
 
 //When the page is loaded, try to open or create the sessionStorage and set style properties
 window.addEventListener('DOMContentLoaded', () => {
-	usernameField.value = username;
+	if (username != null) {
+		usernameField.value = username;
+	} else {
+		usernameField.value = "guest";
+	}
 	request.send();
 });
 
@@ -406,7 +410,7 @@ window.addEventListener('DOMContentLoaded', () => {
 //the category is not cat (default)
 startBtn.addEventListener('click', () => {
 
-	if (username.value != '' && category.value != 'cat') {
+	if (usernameField.value != '' && category.value != 'cat') {
 		//if not, we call login with the username value always in lowercase, then start game and style properties
 		startGame();
 		startContainer.style.display = 'none';

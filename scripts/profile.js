@@ -1,13 +1,23 @@
-//Check if there is a user logged in. If so, redirect to index.html
+const btnRegister = document.getElementById('btnRegister');
+const btnShowPassword = document.getElementById('btnShowPassword');
+
+//Check if there is a user logged in. If not, redirect to index.html
+let user = [];
+
 window.addEventListener('load', () => {
 	if (localStorage.getItem('userLoggedIn')) {
+		user = JSON.parse(localStorage.getItem(localStorage.getItem('userLoggedIn')));
+	} else {
 		window.location.href = '../index.html';
 	}
 });
 
-//CAPTURE BUTTONS
-const btnRegister = document.getElementById('btnRegister');
-const btnShowPassword = document.getElementById('btnShowPassword');
+setTimeout(() => {
+	fieldUsername.value = user[0];
+	fieldPassword.value = user[1];
+	fieldPassword2.value = user[1];
+}, 500);
+
 
 btnShowPassword.addEventListener('change', (e) => {
 	if (e.target.checked) {
@@ -17,30 +27,31 @@ btnShowPassword.addEventListener('change', (e) => {
 	}
 });
 
+
 //Event listener for button register
 btnRegister.addEventListener('click', (e) => {
 	e.preventDefault();
 
+
 	//Create user array
-	let user = [fieldUsername.value, fieldPassword.value];
+	newUser = [fieldUsername.value, fieldPassword.value];
 
 	//Check if all fields are correct (form validation) --> is mandatory, check length, check passwords are equal
 	let allFieldsCorrect = (isMandatory([fieldUsername, fieldPassword, fieldPassword2])) &&
 		checkLength(fieldUsername, 3, 15) && checkLength(fieldPassword, 5, 10)
 		&& checkPasswordsAreEqual(fieldPassword, fieldPassword2);
 
-	console.log(allFieldsCorrect);
-
 
 	// Check if user already exists and user name is not 'userLoggedIn'
-	if (localStorage.getItem(user[0]) || fieldUsername.value == 'userLoggedIn') {
+	if (localStorage.getItem(newUser[0]) || fieldUsername.value == 'userLoggedIn') {
 		message.innerHTML = 'User already exists';
 
 		//if all fields are correct, register user, add logged in user and redirect to index.html
 	} else if (allFieldsCorrect) {
-		localStorage.setItem(user[0], JSON.stringify(user));
-		localStorage.setItem('userLoggedIn', user[0]);
-		setTimeout(() => window.location.href = '../index.html', 500);
+		localStorage.removeItem(user[0]);
+		localStorage.setItem(newUser[0], JSON.stringify(newUser));
+		localStorage.setItem('userLoggedIn', newUser[0]);
+		setTimeout(() => window.location.href = '../pages/profile.html', 500);
 	} else {
 		isMandatory([fieldUsername, fieldPassword, fieldPassword2])
 	}
@@ -80,8 +91,3 @@ function checkPasswordsAreEqual(input1, input2) {
 		return true;
 	}
 }
-
-
-
-
-

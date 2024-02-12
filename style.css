@@ -8,7 +8,6 @@
 	--black: #252422;
 
 
-
 	--error: #c1121f;
 	--light-error: #f2a9ae;
 	--correct: #588157;
@@ -32,10 +31,47 @@ header {
 	padding: 10px;
 }
 
-h1 {
+h2 {
+	color: var(--light);
+	text-align: center;
+	font-size: 40px;
+	margin: 20px 0;
+}
+
+h3 {
+	color: var(--dark-grey);
+	text-align: center;
+	font-size: 30px;
+	margin: 20px 0;
+	text-decoration: underline;
+}
+
+#logo {
 	color: var(--main);
 	font-size: 50px;
+	cursor: pointer;
+	padding: 5px;
+	border-radius: 5px;
+	margin-bottom: 5px;
+	width: fit-content;
 }
+
+#logo:hover {
+	color: var(--light);
+	background-color: var(--main);
+}
+
+.container {
+	border: 2px dotted var(--dark-grey);
+	height: 1000px;
+	margin: 20px;
+	padding: 10px;
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+	justify-content: space-evenly;
+}
+
 
 form {
 	background-color: var(--light);
@@ -48,12 +84,6 @@ form {
 	flex-direction: column;
 }
 
-.btnsUser{
-	position: absolute;
-	right: 0;
-	top: 0;
-	margin: 20px;
-}
 
 button {
 	font-family: 'Cuprum', sans-serif;
@@ -72,18 +102,30 @@ button:hover {
 	padding: 6px 14px;
 }
 
+.btnsUser{
+	position: absolute;
+	right: 0;
+	top: 0;
+	margin: 20px;
+}
 #btnBack {
 	position: absolute;
 	left: 10px;
 	bottom: 10px;
 }
 
+
+
+
+
+
+
+/* ----------FORMS------------ */
 #message{
 	text-align: center;
 	margin: 10px;
 	font-size: 20px;
 }
-
 
 .show-password {
 	display: flex;

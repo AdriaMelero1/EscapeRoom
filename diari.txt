@@ -13,7 +13,8 @@ del juego general al juego del ahoracado (tenia sus propios usuarios)
 Tambien he empezado con los estilos generales. También he cambiado el sistema de records de el ahorcado, 
 de local storage a session storage para no interferir con los usuarios.
 
-Sexto dia: hoy he...
+12-02-2024 - Sexto dia: hoy he acabado la pagina de perfil, donde los usuarios pueden modificar su nombre y contraseña
+A parte, he reestructurado perte del codigo.
 
 Séptimo dia: hoy he...
 
