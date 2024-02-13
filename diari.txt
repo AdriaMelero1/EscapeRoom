@@ -16,6 +16,7 @@ de local storage a session storage para no interferir con los usuarios.
 12-02-2024 - Sexto dia: hoy he acabado la pagina de perfil, donde los usuarios pueden modificar su nombre y contraseña
 A parte, he reestructurado perte del codigo.
 
-Séptimo dia: hoy he...
+13-02-2024 - Séptimo dia: hoy he empezado con la prueba de f1, creando algunos estilos,
+ y aprendiendo a mapear imagenes para hacer click en X zonas
 
 Octavo dia: hoy he...
