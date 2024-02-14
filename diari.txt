@@ -19,4 +19,4 @@ A parte, he reestructurado perte del codigo.
 13-02-2024 - Séptimo dia: hoy he empezado con la prueba de f1, creando algunos estilos,
  y aprendiendo a mapear imagenes para hacer click en X zonas
 
-Octavo dia: hoy he...
+14-02-2024 Octavo dia: hoy he seguido con el mapeado de imagenes, y avanzado en la prueba de f1

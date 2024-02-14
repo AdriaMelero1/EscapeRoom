@@ -32,7 +32,7 @@ h1 {
 	margin: 20px 0;
 }
 
-button {
+#btnStart {
 	padding: 40px 70px;
 	width: fit-content;
 	border: 0;
@@ -53,6 +53,22 @@ button:hover {
 }
 
 
+
+#btnHome {
+	font-family: 'f1font', sans-serif;
+	position: fixed;
+	bottom: 5px;
+	left: 5px;
+	margin: 5px;
+	padding: 5px;
+	background-color: var(--main);
+	font-size: 20px;
+	height: 30px;
+	cursor: pointer;
+	border: 0;
+	border-radius: 5px;
+}
+
 /* ----------STAGE 1 -------------- */
 
 
@@ -62,8 +78,27 @@ button:hover {
 	display: none;
 }
 
-#containerStage1 img {
-	width: 100vw;
-	height: 100vh;
+#imgDesktop {
+	width: 98vw;
+	height: 99vh;
 	object-fit: cover;
+}
+
+#imgMap {
+	text-align: center;
+}
+
+#imgMap img{
+	height: 60vh;
+}
+
+.buttons {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+button img {
+	height: 80px !important;
 }
