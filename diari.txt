@@ -20,3 +20,6 @@ A parte, he reestructurado perte del codigo.
  y aprendiendo a mapear imagenes para hacer click en X zonas
 
 14-02-2024 Octavo dia: hoy he seguido con el mapeado de imagenes, y avanzado en la prueba de f1
+
+19-02-2024 Noveno dia: hoy he avanzado en los destinos de el mapa, especialmente en españa desarrollando
+ la primera prueba (seleccion de neumaticos)

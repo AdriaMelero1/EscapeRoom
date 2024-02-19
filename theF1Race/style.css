@@ -84,11 +84,11 @@ button:hover {
 	object-fit: cover;
 }
 
-#imgMap {
+#divMap {
 	text-align: center;
 }
 
-#imgMap img{
+#divMap img{
 	height: 60vh;
 }
 

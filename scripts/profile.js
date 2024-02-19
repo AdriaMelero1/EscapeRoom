@@ -7,6 +7,11 @@ let user = [];
 window.addEventListener('load', () => {
 	if (localStorage.getItem('userLoggedIn')) {
 		user = JSON.parse(localStorage.getItem(localStorage.getItem('userLoggedIn')));
+		document.getElementById('btnPlayHangman').style.display = 'none';
+		document.getElementById('btnRegisterPage').style.display = 'none';
+		document.getElementById('btnLoginPage').style.display = 'none';
+		document.getElementById('btnProfile').style.display = 'none';
+		
 	} else {
 		window.location.href = '../index.html';
 	}

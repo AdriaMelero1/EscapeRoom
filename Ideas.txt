@@ -8,6 +8,9 @@ Stage 1: Friday - tests
 
 For the test there's a calendar with all the year races, a calendar with the actual day and a map to choose
 the destination (must be this weekend circuit)
+Las fechas de la pantalla van cambiando (random)
+
+Memory con imagenes de pilotos (juntar las parejas por equipos)
 
 
 Stage 2: Saturday - qualifying

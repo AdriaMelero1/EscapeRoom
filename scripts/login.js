@@ -2,6 +2,9 @@
 window.addEventListener('load', () => {
 	if(localStorage.getItem('userLoggedIn')){
 		window.location.href = '../index.html';
+	} else {
+		document.getElementsByClassName('btnsUser')[0].style.display = 'none';
+		document.getElementById('btnPlayHangman').style.display = 'none';
 	}
 });
 
