@@ -1,6 +1,22 @@
 body {
 	background-image: url('monaco.jpg');
-	background-size: cover;
-	background-position: top;
-	background-repeat: no-repeat;
+}
+
+
+
+button {
+	font-size: 20px;
+}
+
+.container img {
+	width: 600px;
+}
+
+.container {
+	padding: 30px;
+}
+
+.options {
+	display: flex;
+	flex-direction: column;
 }

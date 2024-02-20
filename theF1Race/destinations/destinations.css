@@ -1,0 +1,86 @@
+@font-face {
+  font-family: f1font;
+  src: url(/theF1Race/fonts/Formula1-Regular-1.ttf);
+}
+
+:root {
+	--main: #FF1801;
+	--super-light: #c5c5c5;
+	--light: #597081;
+	--black: #000000;
+}
+
+body {
+	font-family: 'f1font', sans-serif;
+	background-size: cover;
+	background-position: top;
+	background-repeat:repeat-y;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+h1 {
+	font-size: 50px;
+}
+
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 70%;
+	height: 70%;
+	background-color: rgba(255, 255, 255, 0.3);
+	padding: 50px;
+	border-radius: 30px;
+	border: 7px solid var(--main);
+}
+
+img {
+	width: 800px;
+	border-radius: 20px;
+}
+
+h2 {
+	color: var(--black);
+	font-size: 40px;
+	margin: 20px 0;
+}
+
+button {
+	margin: 10px;
+	padding: 15px 30px;
+	border: 0;
+	border-radius: 10px;
+	font-size: 25px;
+	font-family: 'f1font', sans-serif;
+	background-color: var(--main);
+	cursor: pointer;
+}
+
+#wrong, #right {
+	width: 60%;
+	margin-top: 100px;
+}
+
+#btnHome {
+	font-family: 'f1font', sans-serif;
+	position: fixed;
+	bottom: 5px;
+	left: 5px;
+	margin: 5px;
+	padding: 5px;
+	background-color: var(--main);
+	font-size: 20px;
+	height: 30px;
+	cursor: pointer;
+	border: 0;
+	border-radius: 5px;
+}
+
+
+h2 {
+	background-color: white;
+	font-size: 28px;
+}

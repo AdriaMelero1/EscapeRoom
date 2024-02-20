@@ -119,7 +119,7 @@ function setDesktopImage() {
 
     const imagesUrls = ['images/desktop2426.png', 'images/desktop0507.png', 'images/desktop1921.png', 'images/desktop2123.png'];
     let random = Math.floor(Math.random() * 4);
-    imgDesktop.src = imagesUrls[3];
+    imgDesktop.src = imagesUrls[random];
     switch (random) {
         case 0:
             destiny = "monaco";
@@ -134,4 +134,13 @@ function setDesktopImage() {
             destiny = "spain";
             break;
     }
+
 }
+
+
+document.getElementById('btnBack').addEventListener('click', (e) => {
+
+    imgDesktop.style.display = 'block';
+    divMap.style.display = 'none';
+    imgCalendar.style.display = 'none';
+});

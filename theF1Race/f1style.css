@@ -28,7 +28,7 @@ body {
 h1 {
 	color: var(--main);
 	text-align: center;
-	font-size: 40px;
+	font-size: 50px;
 	margin: 20px 0;
 }
 
@@ -54,7 +54,7 @@ button:hover {
 
 
 
-#btnHome {
+#btnHome, #btnBack {
 	font-family: 'f1font', sans-serif;
 	position: fixed;
 	bottom: 5px;
@@ -69,7 +69,11 @@ button:hover {
 	border-radius: 5px;
 }
 
-/* ----------STAGE 1 -------------- */
+#btnBack {
+	left: inherit;
+	right: 5px;
+}
+
 
 
 #containerStage1 {
@@ -99,6 +103,16 @@ button:hover {
 	width: 100%;
 }
 
+button {
+	background-color: var(--main);
+	padding: 10px;
+	border: 0;
+	border-radius: 10px;
+	margin: 10px;
+	cursor: pointer;
+}
+
 button img {
 	height: 80px !important;
+	border-radius: 10px;
 }

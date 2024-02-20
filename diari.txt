@@ -23,3 +23,6 @@ A parte, he reestructurado perte del codigo.
 
 19-02-2024 Noveno dia: hoy he avanzado en los destinos de el mapa, especialmente en españa desarrollando
  la primera prueba (seleccion de neumaticos)
+
+20-02-2024 Decimo dia: hoy he acabado las preguntas de los 4 destinos, y empezado el memory 
+donde es redirigido despues de adivinar la pregunta

@@ -46,7 +46,7 @@ btnLogo.addEventListener('click', () => {
 });
 
 btnPlayThef1Race.addEventListener('click', () => {
-	window.location.href = 'theF1Race/index.html';
+	window.location.href = 'theF1Race/f1index.html';
 });
 
 
@@ -111,3 +111,4 @@ window.addEventListener('load', () => {
 		btnProfile.style.display = 'none';
 	}
 });
+
