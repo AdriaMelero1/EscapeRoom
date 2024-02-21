@@ -72,6 +72,7 @@ button:hover {
 #btnBack {
 	left: inherit;
 	right: 5px;
+	display: none;
 }
 
 

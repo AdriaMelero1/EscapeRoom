@@ -29,22 +29,29 @@ btnHome.addEventListener('click', function () {
 areaCalendar.addEventListener('click', function (e) {
     imgDesktop.style.display = 'none';
     imgCalendar.style.display = 'block';
+    document.getElementById('btnBack').style.display = 'block';
+
 });
 
 
 imgCalendar.addEventListener('click', function (e) {
     imgDesktop.style.display = 'block';
     imgCalendar.style.display = 'none';
+    document.getElementById('btnBack').style.display = 'none';
 });
 
 areaMap.addEventListener('click', function (e) {
     imgDesktop.style.display = 'none';
     divMap.style.display = 'block';
+    document.getElementById('btnBack').style.display = 'block';
+
 });
 
 divMap.addEventListener('click', function (e) {
     imgDesktop.style.display = 'block';
     divMap.style.display = 'none';
+    document.getElementById('btnBack').style.display = 'none';
+
 });
 
 
@@ -143,4 +150,5 @@ document.getElementById('btnBack').addEventListener('click', (e) => {
     imgDesktop.style.display = 'block';
     divMap.style.display = 'none';
     imgCalendar.style.display = 'none';
+    document.getElementById('btnBack').style.display = 'none';
 });

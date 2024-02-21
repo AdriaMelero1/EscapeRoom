@@ -96,3 +96,10 @@ function checkPasswordsAreEqual(input1, input2) {
 		return true;
 	}
 }
+
+
+document.getElementById('btnDelete').addEventListener('click', () => {
+	localStorage.removeItem(user[0]);
+	localStorage.removeItem('userLoggedIn');
+	window.location.href = '../index.html';
+});

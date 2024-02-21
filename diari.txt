@@ -26,3 +26,5 @@ A parte, he reestructurado perte del codigo.
 
 20-02-2024 Decimo dia: hoy he acabado las preguntas de los 4 destinos, y empezado el memory 
 donde es redirigido despues de adivinar la pregunta
+
+21-02-2024 Onceavo dia: hoy he acabado el memory y añadido la opcion de eliminar usuario en la sección de perfil

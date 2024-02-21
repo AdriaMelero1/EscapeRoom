@@ -1,3 +1,18 @@
+:root {
+	--main: #FF1801;
+	--super-light: #c5c5c5;
+	--light: #597081;
+	--black: #000000;
+}
+
+@font-face {
+  font-family: f1font;
+  src: url(/theF1Race/fonts/Formula1-Bold_web.ttf);
+}
+
+
+
+
 * {
 	margin: 0;
 	padding: 0;
@@ -8,8 +23,9 @@ body {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	background-color: #84a98c;
-	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	background-color: var(--light);
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+		sans-serif;
 }
 
 .container {
@@ -18,17 +34,20 @@ body {
 	align-items: center;
 	justify-content: center;
 	max-width: 90%;
-	margin: 150px 50px 50px 50px;
+	margin: 50px 50px 50px 50px;
 	padding: 20px;
-	border: 5px solid #cad2c5;
+	border: 5px solid var(--black);
 	border-radius: 20px;
 }
 
 .card {
-	width: 200px;
-	height: 200px;
-	background-color: #52796f;
- 	border: 2px solid #2f3e46;
+	width: 12vw;
+	height: 12vw;
+
+	max-width: 150px;
+	max-height: 150px;
+	background-color: var(--light);
+	border: 3px solid var(--main);
 	margin: 5px;
 	border-radius: 15px;
 	display: flex;
@@ -38,13 +57,17 @@ body {
 	cursor: pointer;
 }
 
-.card img{
-	opacity: 0;
-	color: #cad2c5;
+.card img {
+	display: none;
+	border-radius: 12px;
+
+	width: 100%;
+	height: 100%;
+	margin: 20px;
 }
 
 .show {
-	opacity: 1;
+	display: block !important;
 }
 
 .message {
@@ -54,20 +77,33 @@ body {
 	font-size: 35px;
 }
 
-
-button{
+button {
+	font-family: 'f1font', sans-serif;
 	padding: 10px 20px;
 	border-radius: 35px;
-	border: 2px solid #cad2c5;
-	background-color: #2f3e46;
-	color: #cad2c5;
+	border: 2px solid var(--black);
+	background-color: var(--main);
+	color: var(--black);
 	font-size: 20px;
 	cursor: pointer;
+	margin-bottom: 10px;
 }
 
+.big {
+	font-size: 40px;
+	padding: 20px;
+	position: absolute;
+	top: 40%;
+	display: block !important;
+}
 
-img {
-	width: 100%;
-	height: 100%;
+#btnHome{
+	display: none;
+	top: 55%;
+}
+
+#message {
+	font-family: 'f1font', sans-serif;
+	text-align: center;
 	margin: 20px;
 }

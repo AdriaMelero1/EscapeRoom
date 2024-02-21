@@ -5,7 +5,7 @@ const btnRegisterPage = document.getElementById('btnRegisterPage');
 const btnLogout = document.getElementById('btnLogout');
 const btnProfile = document.getElementById('btnProfile');
 const btnLogo = document.getElementById('logo');
-const btnPlayThef1Race = document.getElementById('btnPlaytheF1Race');
+const btnPlayTheF1Race = document.getElementById('btnPlaytheF1Race');
 
 
 //CAPTURE FIELDS
@@ -45,7 +45,7 @@ btnLogo.addEventListener('click', () => {
 	window.location.href = '../index.html';
 });
 
-btnPlayThef1Race.addEventListener('click', () => {
+btnPlayTheF1Race.addEventListener('click', () => {
 	window.location.href = 'theF1Race/f1index.html';
 });
 
