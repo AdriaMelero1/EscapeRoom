@@ -22,7 +22,7 @@ const cardsUrls = [
 
 ];
 
-// cardsUrls.sort(() => Math.random() - 0.5);
+cardsUrls.sort(() => Math.random() - 0.5);
 
 let showedCards = 0;
 
