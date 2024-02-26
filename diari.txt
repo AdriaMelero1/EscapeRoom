@@ -28,3 +28,6 @@ A parte, he reestructurado perte del codigo.
 donde es redirigido despues de adivinar la pregunta
 
 21-02-2024 Onceavo dia: hoy he acabado el memory y añadido la opcion de eliminar usuario en la sección de perfil
+
+26-02-2024 Decimosegundo dia: hoy he creado la interfaz de la prueba de encontrar las diferencias de el segundo 
+escape room (cyberpunk), tambien generado las imagenes y modificado para el juego

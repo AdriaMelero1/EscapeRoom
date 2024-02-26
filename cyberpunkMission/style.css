@@ -1,0 +1,107 @@
+/* 
+	#711c91 Dark purple
+	#ea00d9 Pink
+	#0abdc6 Light Blue
+	#133e7c Blue
+	#091833 Dark Blue
+*/
+@font-face {
+	font-family: cyberfont;
+	src: url(/cyberpunkMission/Sddystopiandemo-GO7xa.otf);
+}
+
+:root {
+	--main: #711c91;
+	--pink: #ea00d9;
+	--light-blue: #0abdc6;
+	--blue: #133e7c;
+	--dark-blue: #091833;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body, .container {
+	margin: 20px;
+	font-family: "cyberfont", sans-serif;
+	background-image: url("images/background1-transformed.png");
+	background-size: cover;
+	background-position: top;
+	background-repeat: repeat-y;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow: hidden;
+}
+
+.container {
+	background-image: url(images/background3-transformed.png);
+}
+
+
+h1 {
+	margin: 20px;
+	color: var(--pink);
+	font-size: 60px;
+	text-shadow: -4px -3px var(--light-blue);
+}
+
+h2 {
+	color: var(--light-blue);
+	font-size: 40px;
+	text-shadow: -4px -3px var(--pink);
+}
+
+
+.images {
+	width: 90%;
+	display:  flex;
+	justify-content: space-around;
+	margin-top: 20px;
+}
+
+
+img {
+	width: 35%;
+	margin: 20px;
+	border: 5px var(--blue) solid;
+	box-shadow: 0px 0px 30px 15px var(--light-blue);
+}
+
+form{
+	width: 70%;
+	padding: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 20px;
+	background-image: url(images/background2-transformed.png);
+	color: #0abdc6;
+	border: 4px solid var(--pink);
+}
+
+label {
+	font-size: 30px;
+	background-color: var(--main);
+}
+
+input, button {
+	text-align: center;
+	width: 100px;
+	font-family: "impact", sans-serif;
+	padding: 10px;
+	margin: 10px;
+	background-color: #711c91;
+	border: 0;
+	color: var(--light-blue);
+	font-size: 20px;
+}
+
+
+input:focus {
+	border: 0;
+	background-color: var(--light-blue);
+	color: var(--pink);
+}

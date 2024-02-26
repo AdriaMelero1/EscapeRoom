@@ -6,6 +6,7 @@ const btnLogout = document.getElementById('btnLogout');
 const btnProfile = document.getElementById('btnProfile');
 const btnLogo = document.getElementById('logo');
 const btnPlayTheF1Race = document.getElementById('btnPlaytheF1Race');
+const btnPlaycyberpunkmission = document.getElementById('btnPlaycyberpunkmission');
 
 
 //CAPTURE FIELDS
@@ -47,6 +48,10 @@ btnLogo.addEventListener('click', () => {
 
 btnPlayTheF1Race.addEventListener('click', () => {
 	window.location.href = 'theF1Race/f1index.html';
+});
+
+btnPlaycyberpunkmission.addEventListener('click', () => {
+	window.location.href = 'cyberpunkMission/index.html';
 });
 
 
