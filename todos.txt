@@ -5,6 +5,7 @@ Ocultar botones de login, register... en las pagians de login, register y perfil
 Option to delete user on profile page
 
 
-
+Sistema puntuacion
+Pantalla para ver records
 
 Mobile version

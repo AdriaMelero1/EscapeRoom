@@ -85,11 +85,14 @@ form{
 label {
 	font-size: 30px;
 	background-color: var(--main);
+	padding: 5px;
+	border: 2px solid var(--light-blue);
 }
 
 input, button {
+	padding: 5px;
 	text-align: center;
-	width: 100px;
+	width: 200px;
 	font-family: "impact", sans-serif;
 	padding: 10px;
 	margin: 10px;
@@ -97,6 +100,7 @@ input, button {
 	border: 0;
 	color: var(--light-blue);
 	font-size: 20px;
+	border: 2px solid var(--light-blue);
 }
 
 
@@ -104,4 +108,14 @@ input:focus {
 	border: 0;
 	background-color: var(--light-blue);
 	color: var(--pink);
+}
+
+.error, .good {
+	display: none;
+	height: 90%;
+	text-align: center;
+}
+
+.error img, .good img{
+	width: 80%;
 }

@@ -31,3 +31,6 @@ donde es redirigido despues de adivinar la pregunta
 
 26-02-2024 Decimosegundo dia: hoy he creado la interfaz de la prueba de encontrar las diferencias de el segundo 
 escape room (cyberpunk), tambien generado las imagenes y modificado para el juego
+
+27-02-2024 Decimotercer dia: hoy he acabado el juego de las diferencias y el juego de adivinar el numero. 
+Falta implementar sistema de puntuacion + ver records
