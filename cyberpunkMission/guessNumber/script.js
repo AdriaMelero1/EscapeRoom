@@ -2,7 +2,7 @@ let number = document.querySelector('input');
 
 let focused = false;
 let secretNumber;
-let tries = 0;
+let tries = sessionStorage.getItem("tries");
 
 window.onload = function () {
 
@@ -26,6 +26,7 @@ number.addEventListener("focus", () => {
 document.querySelector('button').addEventListener('click', (e) => {
 
 	tries++;
+	console.log(tries);
 	document.querySelector('.lower').style.display = 'none';
 	document.querySelector('.higher').style.display = 'none';
 
@@ -36,6 +37,11 @@ document.querySelector('button').addEventListener('click', (e) => {
 		document.querySelector('.container').style.display = "none";
 		document.querySelector('.good').style.display = "block";
 		document.querySelector('.good').querySelector('span').innerText = tries;
+		let record = localStorage.getItem("record");
+		if (!record || tries < record) {
+			localStorage.setItem("record", tries);
+		}
+		sessionStorage.setItem("tries", 0);
 		setTimeout(() => {
 			window.location.href = "/index.html";
 		}, 3000);

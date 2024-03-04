@@ -453,13 +453,7 @@ backBtnRecords.addEventListener('click', () => {
 
 
 //Button to acces records screen, text is set using generateRecords
-recordsBtn.addEventListener('click', () => {
-	startContainer.style.display = 'none';
-	container.style.display = 'none';
-	recordsContainer.style.display = 'flex';
 
-	records.innerHTML = generateRecords();
-});
 
 homeBtn.addEventListener('click', () => {
 	window.location.href = '/index.html';

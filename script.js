@@ -19,9 +19,8 @@ const message = document.getElementById('message');
 
 
 
-//BUTTONS EVENT LISTENERS
+//BUTTONS EVENT LISTENERS (redirections)
 btnLoginPage.addEventListener('click', () => {
-	console.log("BTN login");
 		window.location.href = '/pages/login.html';
 });
 
@@ -98,22 +97,30 @@ function isMandatory(inputArray) {
 
 
 
-
+//Window on load event
 window.addEventListener('load', () => {
 
+	//show and hide some buttons depending if theres a user logged in
 	if(localStorage.getItem('userLoggedIn')){
 		btnLogout.style.display = 'true';
 		btnPlayHangman.style.display = 'true';
 		btnLoginPage.style.display = 'none';
 		btnRegisterPage.style.display = 'none';
 		btnProfile.style.display = 'true';
-		console.log("Welcome " + localStorage.getItem('userLoggedIn'));
 	} else {
 		btnLogout.style.display = 'none';
 		btnPlayHangman.style.display = 'true';
 		btnLoginPage.style.display = 'true';
 		btnRegisterPage.style.display = 'true';
 		btnProfile.style.display = 'none';
+	}
+
+	//Try to get record from localstorage
+	let record = localStorage.getItem("record");
+
+	//If there's one, display it under the button
+	if(record != null) {
+		btnPlaycyberpunkmission.querySelector('h6').innerText = "Actual record: " + record + " tries";
 	}
 });
 

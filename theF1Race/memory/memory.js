@@ -1,3 +1,4 @@
+//cards image url and the team of the driver
 const cardsUrls = [
 	['alexander.avif', 'williams'],
 	['logan.avif', 'williams'],
@@ -22,11 +23,13 @@ const cardsUrls = [
 
 ];
 
+//Sort randomly the cards
 cardsUrls.sort(() => Math.random() - 0.5);
 
 let showedCards = 0;
 
 
+//On load, add the 20 cards to the container with its image
 window.addEventListener('load', (e) => {
 
 	for (let i = 0; i < cardsUrls.length; i++) {
@@ -35,11 +38,15 @@ window.addEventListener('load', (e) => {
 	}
 });
 
+//Button restart to refresh the page
 document.getElementById('btnRestart').addEventListener("click", function () {
 	location.reload();
 });
 
+
 let showingCards = [];
+
+
 document.getElementsByClassName('container')[0].addEventListener("click", function (e) {
 
 	if (e.target.classList.contains('card')) {

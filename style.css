@@ -29,6 +29,7 @@ body {
 header {
 	background-color: var(--dark-grey);
 	padding: 10px;
+	display: flex;
 }
 
 h2 {
@@ -63,12 +64,13 @@ h3 {
 
 .container {
 	border: 2px dotted var(--dark-grey);
-	height: 1000px;
+	min-height: 70vh;
+	height: auto;
 	margin: 20px;
 	padding: 10px;
 	display: flex;
 	flex-direction: row;
-	align-items: baseline;
+	align-items: center;
 	justify-content: space-evenly;
 }
 
@@ -115,7 +117,10 @@ button:hover {
 	bottom: 10px;
 }
 
-
+.container button {
+	padding: 40px;
+	font-size: 40px;
+}
 
 
 
@@ -195,3 +200,32 @@ button:hover {
 }
 
 
+
+
+@media screen  and (max-width: 1300px){
+	.container button{
+		padding: 20px;
+		font-size: 30px;
+	}
+}
+
+
+@media screen  and (max-width: 900px){
+	.container {
+		flex-direction: column;
+	}
+
+	.container button{
+		padding: 30px;
+		font-size: 35px;
+	}
+
+	header {
+		flex-direction: column;
+	}
+
+	.btnsUser {
+		position: relative;
+		margin: 0;
+	}
+}

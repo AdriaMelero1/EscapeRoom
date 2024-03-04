@@ -1,3 +1,4 @@
+//Capture DOM elements and declare variables
 const btnStart = document.getElementById('btnStart');
 const containerStage1 = document.getElementById("containerStage1");
 const btnHome = document.getElementById("btnHome");
@@ -8,12 +9,13 @@ let areaMap = document.getElementById('areaMap');
 let divMap = document.getElementById('divMap');
 let destiny;
 
-
+//On load, call a function to set image coordinates and to update coords
 window.onload = function () {
     setDesktopImage();
+    updateCoords();
 };
 
-
+//Buttons with action listeners
 btnStart.addEventListener('click', function () {
     btnStart.style.display = 'none';
     document.querySelector("h1").style.display = 'none';
@@ -26,11 +28,11 @@ btnHome.addEventListener('click', function () {
 });
 
 
+//Action listener for maps and images (to display and hide)
 areaCalendar.addEventListener('click', function (e) {
     imgDesktop.style.display = 'none';
     imgCalendar.style.display = 'block';
     document.getElementById('btnBack').style.display = 'block';
-
 });
 
 
@@ -55,6 +57,7 @@ divMap.addEventListener('click', function (e) {
 });
 
 
+//Event listeners for the 4 destinations
 document.getElementById('monaco').addEventListener('click', function (e) {
     if (destiny === "monaco") {
         window.location.href = "destinations/monaco/monaco.html";
@@ -99,7 +102,6 @@ let originalCoordsMap = areaMap.coords.split(',').map(Number);
 
 // Function to update the coordinates of the areas
 function updateCoords() {
-    console.log("Cords updated");
     let currentWidth = imgDesktop.offsetWidth;
     let currentHeight = imgDesktop.offsetHeight;
 
@@ -119,11 +121,12 @@ function updateCoords() {
     areaMap.coords = relativeCoordsMap.join(',');
 }
 
+//When resize window, call updateCords
 window.addEventListener('resize', updateCoords);
-
 
 function setDesktopImage() {
 
+    //Get a random number to determinate the background image and the destiny
     const imagesUrls = ['images/desktop2426.png', 'images/desktop0507.png', 'images/desktop1921.png', 'images/desktop2123.png'];
     let random = Math.floor(Math.random() * 4);
     imgDesktop.src = imagesUrls[random];
@@ -144,7 +147,7 @@ function setDesktopImage() {
 
 }
 
-
+//Event listener for button back
 document.getElementById('btnBack').addEventListener('click', (e) => {
 
     imgDesktop.style.display = 'block';

@@ -1,5 +1,6 @@
 .container {
 	height: 800px !important;
+	border: 10px solid var(--blue);
 }
 
 .higher, .lower {

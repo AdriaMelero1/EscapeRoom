@@ -7,7 +7,7 @@
 */
 @font-face {
 	font-family: cyberfont;
-	src: url(/cyberpunkMission/Sddystopiandemo-GO7xa.otf);
+	src: url(/cyberpunkMission/GlitchGoblin-2O87v.ttf);
 }
 
 :root {
@@ -54,17 +54,23 @@ h2 {
 	text-shadow: -4px -3px var(--pink);
 }
 
+h3 {
+	color: var(--light-blue);
+	font-size: 40px;
+	text-shadow: -4px -3px var(--pink);
+}
+
 
 .images {
 	width: 90%;
 	display:  flex;
-	justify-content: space-around;
+	justify-content: space-evenly;
 	margin-top: 20px;
 }
 
 
 img {
-	width: 35%;
+	width: 30%;
 	margin: 20px;
 	border: 5px var(--blue) solid;
 	box-shadow: 0px 0px 30px 15px var(--light-blue);
@@ -93,7 +99,7 @@ input, button {
 	padding: 5px;
 	text-align: center;
 	width: 200px;
-	font-family: "impact", sans-serif;
+	font-family: "cyberfont", sans-serif;
 	padding: 10px;
 	margin: 10px;
 	background-color: #711c91;
