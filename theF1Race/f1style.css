@@ -7,7 +7,7 @@
 
 @font-face {
   font-family: f1font;
-  src: url(fonts/Formula1-Regular-1.ttf);
+  src: url(../fonts/Formula1-Regular-1.ttf);
 }
 
 * {
@@ -30,6 +30,16 @@ h1 {
 	text-align: center;
 	font-size: 50px;
 	margin: 20px 0;
+}
+
+h4{
+	color: var(--main);
+	position: absolute;
+	bottom: 50px;
+	left: 15px;
+	font-size: 20px;
+	background-color: black;
+	padding: 5px;
 }
 
 #btnStart {

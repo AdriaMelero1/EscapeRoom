@@ -2,6 +2,17 @@
 //the wrong answer a fail will appear for a second and then you can try again, 
 //if is the good answer, a image will appear and then you're redirected to the next stage
 
+
+let seconds = sessionStorage.getItem("seconds");
+const timer = document.querySelector('h4');
+
+
+window.setInterval(function(){
+	seconds++;
+	timer.innerText= `Time: ${seconds}s`;
+}, 1000) 
+
+
 //Event listeners for the answer buttons
 document.getElementById('bad').addEventListener('click', function (e) {
 	wrongAnswer();
@@ -35,6 +46,7 @@ function rightAnswer() {
 	document.getElementsByClassName('container')[0].style.display = 'none';
 	document.getElementById('right').style.display = 'block';
 	setTimeout(function () {
+		sessionStorage.setItem("seconds", seconds);
 		window.location.href = "/theF1Race/memory/memory.html";
 	}, 2000);
 }

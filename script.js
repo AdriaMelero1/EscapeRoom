@@ -66,7 +66,6 @@ function displayError(input, message){
 	const label = formControl.querySelector('label');
 	const small = formControl.querySelector('small');
 	small.innerText = message;
-	console.log("Displaying error..." + input + " " + message);
 }
 
 //Display correct message
@@ -115,12 +114,20 @@ window.addEventListener('load', () => {
 		btnProfile.style.display = 'none';
 	}
 
-	//Try to get record from localstorage
-	let record = localStorage.getItem("record");
+	//Try to get cyberpunk record from localstorage
+	let recordCyber = localStorage.getItem("recordCyber");
 
 	//If there's one, display it under the button
-	if(record != null) {
-		btnPlaycyberpunkmission.querySelector('h6').innerText = "Actual record: " + record + " tries";
+	if(recordCyber != null) {
+		document.querySelector('#recordCyber').innerText = "Actual record: " + recordCyber + " tries";
+	}
+
+	//Try to get f1 record from localstorage
+	let f1record = localStorage.getItem("f1record");
+
+	//If there's one, display it under the button
+	if(f1record != null) {
+		document.querySelector('#f1record').innerText = "Actual record: " + f1record + " seconds";
 	}
 });
 

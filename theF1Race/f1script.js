@@ -8,12 +8,19 @@ let imgCalendar = document.getElementById('imgCalendar');
 let areaMap = document.getElementById('areaMap');
 let divMap = document.getElementById('divMap');
 let destiny;
+const timer = document.querySelector('h4');
+let seconds = 0;
 
 //On load, call a function to set image coordinates and to update coords
 window.onload = function () {
     setDesktopImage();
     updateCoords();
 };
+
+window.setInterval(function(){
+    seconds++;
+    timer.innerText= `Time: ${seconds}s`;
+}, 1000);
 
 //Buttons with action listeners
 btnStart.addEventListener('click', function () {
@@ -60,6 +67,7 @@ divMap.addEventListener('click', function (e) {
 //Event listeners for the 4 destinations
 document.getElementById('monaco').addEventListener('click', function (e) {
     if (destiny === "monaco") {
+        sessionStorage.setItem("seconds", seconds);
         window.location.href = "destinations/monaco/monaco.html";
     } else {
         alert("You are not in Monaco");
@@ -68,6 +76,7 @@ document.getElementById('monaco').addEventListener('click', function (e) {
 
 document.getElementById('hungary').addEventListener('click', function (e) {
     if (destiny === "hungary") {
+        sessionStorage.setItem("seconds", seconds);
         window.location.href = "destinations/hungary/hungary.html";
     } else {
         alert("You are not in Hungary");
@@ -76,6 +85,7 @@ document.getElementById('hungary').addEventListener('click', function (e) {
 
 document.getElementById('spain').addEventListener('click', function (e) {
     if (destiny === "spain") {
+        sessionStorage.setItem("seconds", seconds);
         window.location.href = "destinations/spain/spain.html";
     } else {
         alert("You are not in spain");
@@ -84,6 +94,7 @@ document.getElementById('spain').addEventListener('click', function (e) {
 
 document.getElementById('england').addEventListener('click', function (e) {
     if (destiny === "england") {
+        sessionStorage.setItem("seconds", seconds);
         window.location.href = "destinations/england/england.html";
     } else {
         alert("You are not in england");
@@ -129,6 +140,7 @@ function setDesktopImage() {
     //Get a random number to determinate the background image and the destiny
     const imagesUrls = ['images/desktop2426.png', 'images/desktop0507.png', 'images/desktop1921.png', 'images/desktop2123.png'];
     let random = Math.floor(Math.random() * 4);
+    // let random = 3;
     imgDesktop.src = imagesUrls[random];
     switch (random) {
         case 0:

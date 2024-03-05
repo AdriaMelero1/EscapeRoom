@@ -32,7 +32,6 @@ btnRegister.addEventListener('click', (e) => {
 		checkLength(fieldUsername, 3, 15) && checkLength(fieldPassword, 5, 10)
 		&& checkPasswordsAreEqual(fieldPassword, fieldPassword2);
 
-	console.log(allFieldsCorrect);
 
 
 	// Check if user already exists and user name is not 'userLoggedIn'

@@ -7,10 +7,13 @@
 
 @font-face {
   font-family: f1font;
-  src: url(/theF1Race/fonts/Formula1-Bold_web.ttf);
+  src: url(/fonts/Formula1-Bold_web.ttf);
 }
 
-
+@font-face {
+  font-family: f1font2;
+  src: url(/fonts/Formula1-Regular-1.ttf);
+}
 
 
 * {
@@ -24,8 +27,34 @@ body {
 	align-items: center;
 	flex-direction: column;
 	background-color: var(--light);
-	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+	font-family: "f1font", sans-serif,
 		sans-serif;
+}
+
+h3{
+	position: absolute;
+	top: 15%;
+	font-size: 25px;
+	font-family: "f1font2";
+}
+
+h5{
+	position: absolute;
+	top: 20%;
+	font-size: 25px;
+	font-family: "f1font2";
+}
+
+
+h4{
+	color: var(--main);
+	position: absolute;
+	bottom: 50px;
+	left: 10px;
+	font-size: 20px;
+	background-color: black;
+	padding: 5px;
+	font-family: "f1font2";
 }
 
 .container {
@@ -97,9 +126,19 @@ button {
 	display: block !important;
 }
 
-#btnHome{
-	display: none;
-	top: 55%;
+#btnHome {
+	font-family: 'f1font', sans-serif;
+	position: absolute;
+	bottom: 5px;
+	left: 5px;
+	margin: 5px;
+	padding: 5px;
+	background-color: var(--main);
+	font-size: 20px;
+	height: 30px;
+	cursor: pointer;
+	border: 0;
+	border-radius: 5px;
 }
 
 #message {

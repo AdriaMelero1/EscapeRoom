@@ -35,5 +35,8 @@ escape room (cyberpunk), tambien generado las imagenes y modificado para el jueg
 27-02-2024 Decimotercer dia: hoy he acabado el juego de las diferencias y el juego de adivinar el numero. 
 Falta implementar sistema de puntuacion + ver records
 
-04-03-2024 Decimocuarto dia: hoy he desarrolado el sistema de records para el cyberpunk
+04-03-2024 Decimocuarto dia: hoy he desarrollado el sistema de records para el cyberpunk
 y empezado a comentar todo el codigo
+
+05-03-2024 Decimoquinto dia: hoy he acabado de comentar el código, desarrollado el sistema de records para f1, con el sistema de tiempo.
+y he empezado la documentación técnica

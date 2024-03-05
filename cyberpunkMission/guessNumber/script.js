@@ -26,7 +26,6 @@ number.addEventListener("focus", () => {
 document.querySelector('button').addEventListener('click', (e) => {
 
 	tries++;
-	console.log(tries);
 	document.querySelector('.lower').style.display = 'none';
 	document.querySelector('.higher').style.display = 'none';
 
@@ -37,9 +36,9 @@ document.querySelector('button').addEventListener('click', (e) => {
 		document.querySelector('.container').style.display = "none";
 		document.querySelector('.good').style.display = "block";
 		document.querySelector('.good').querySelector('span').innerText = tries;
-		let record = localStorage.getItem("record");
+		let record = localStorage.getItem("recordCyber");
 		if (!record || tries < record) {
-			localStorage.setItem("record", tries);
+			localStorage.setItem("recordCyber", tries);
 		}
 		sessionStorage.setItem("tries", 0);
 		setTimeout(() => {
