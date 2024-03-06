@@ -22,11 +22,12 @@ body {
 
 h1 {
 	font-size: 50px;
+	margin: 0;
 }
 
 h4{
 	color: var(--main);
-	position: absolute;
+	position: fixed;
 	bottom: 20px;
 	left: 15px;
 	font-size: 20px;
@@ -43,6 +44,7 @@ h4{
 	height: 70%;
 	background-color: rgba(255, 255, 255, 0.3);
 	padding: 50px;
+	padding-top: 20px;
 	border-radius: 30px;
 	border: 7px solid var(--main);
 }
@@ -55,7 +57,7 @@ img {
 h2 {
 	color: var(--black);
 	font-size: 40px;
-	margin: 20px 0;
+	margin: 10px 0;
 }
 
 button {

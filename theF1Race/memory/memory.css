@@ -26,7 +26,7 @@ body {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	background-color: var(--light);
+	background-color: var(--black);
 	font-family: "f1font", sans-serif,
 		sans-serif;
 }
@@ -65,7 +65,7 @@ h4{
 	max-width: 90%;
 	margin: 50px 50px 50px 50px;
 	padding: 20px;
-	border: 5px solid var(--black);
+	border: 2px solid var(--main);
 	border-radius: 20px;
 }
 
@@ -75,7 +75,7 @@ h4{
 
 	max-width: 150px;
 	max-height: 150px;
-	background-color: var(--light);
+	background-color: var(--black);
 	border: 3px solid var(--main);
 	margin: 5px;
 	border-radius: 15px;
@@ -97,6 +97,7 @@ h4{
 
 .show {
 	display: block !important;
+	border: 0;
 }
 
 .message {
