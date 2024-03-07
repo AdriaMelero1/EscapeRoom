@@ -29,6 +29,7 @@ body {
 	background-color: var(--black);
 	font-family: "f1font", sans-serif,
 		sans-serif;
+		overflow: hidden;
 }
 
 h3{
@@ -105,6 +106,7 @@ h4{
 	top: 20px;
 	margin-top: 30px;
 	font-size: 35px;
+	color: white;
 }
 
 button {
@@ -146,4 +148,5 @@ button {
 	font-family: 'f1font', sans-serif;
 	text-align: center;
 	margin: 20px;
+	color: white;
 }
